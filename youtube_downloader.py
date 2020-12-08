@@ -3,8 +3,8 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-url = "https://www.youtube.com/watch?v=xoWxv2yZXLQ"
-# url = "https://www.youtube.com/watch?v=WW1BpABbzHs"
+# url = "https://www.youtube.com/watch?v=xoWxv2yZXLQ"
+url = "PASTE A YOUTUBE LINK HERE"
 
 def getYouTubeLinks(url):
 	response = requests.get(url)
