@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 # url = "https://www.youtube.com/watch?v=xoWxv2yZXLQ"
 url = "PASTE A YOUTUBE LINK HERE"
 
+#Returns lists of links of thumbnails, videos and audios
 def getYouTubeLinks(url):
 	response = requests.get(url)
 	data = response.content.decode("utf-8")
@@ -39,12 +40,17 @@ def getYouTubeLinks(url):
 			continue
 	return filename, links, thumbs, videos, audios
 
-filename,links, thumbs, videos, audios = getYouTubeLinks(url)
+filename, links, thumbs, videos, audios = getYouTubeLinks(url)
 
+#Name of the video
 print(filename)
+#All links
 print(len(links), links)
+#Thumbnail links
 print(len(thumbs), thumbs)
+#Video links
 print(len(videos), videos)
+#Audio links
 print(len(audios), audios)
 
 #Downloading files from links
