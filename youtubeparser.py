@@ -49,7 +49,7 @@ print(len(audios), audios)
 
 #Downloading files from links
 def downloadLink(link, filename):
-	r = requests.get(audios[2], stream=True, allow_redirects=True)
+	r = requests.get(link, stream=True, allow_redirects=True)
 	ext = r.headers.get('content-type').split("/")[-1]
 	x = filename.replace("/", "_").replace("\\","_")+"."+ext
 	with open(x, "wb") as file:
